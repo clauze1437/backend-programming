@@ -17,13 +17,11 @@ class StudentController {
   store(req, res) {
     const { nama } = req.body;
     // TODO 5: Tambahkan data students
-    // code here
-
-    dataStudents.push(students);
+    dataStudents.push(nama);
 
     const data = {
       message: `Menambahkan data student: ${nama}`,
-      data: students,
+      data: dataStudents,
     };
 
     res.json(data);
@@ -34,12 +32,11 @@ class StudentController {
     const { nama } = req.body;
 
     // TODO 6: Update data students
-    // code here
-    students[id] = nama;
+    dataStudents[id] = nama;
 
     const data = {
       message: `Mengedit student id ${id}, nama ${nama}`,
-      data: students,
+      data: dataStudents,
     };
 
     res.json(data);
@@ -49,10 +46,11 @@ class StudentController {
     const { id } = req.params;
 
     // TODO 7: Hapus data students
-    // code here
+    dataStudents.splice(1, id);
+
     const data = {
       message: `Menghapus student id ${id}`,
-      data: [],
+      data: dataStudents,
     };
 
     res.json(data);
