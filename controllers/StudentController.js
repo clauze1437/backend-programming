@@ -1,5 +1,4 @@
 // TODO 3: Import data students dari folder data/students.js
-const students = require("../data/students");
 const dataStudents = require("../data/students");
 
 // Membuat Class StudentController
