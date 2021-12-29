@@ -5,7 +5,7 @@
     "mysql": "^2.18.1",
     "nodemon": "^2.0.15"
   },
-  "name": "praktikum-12",
+  "name": "task-12",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
