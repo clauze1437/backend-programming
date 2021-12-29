@@ -22,14 +22,12 @@ class StudentController {
      * Mengembalikan response dalam bentuk json.
      */
 
-    const { nama } = req.body;
     // Tambahkan data students
     const students = await Student.create(req.body);
-    // dataStudents.push(nama);
 
     const data = {
       message: "Menambahkan data student",
-      data: [],
+      data: students,
     };
 
     res.json(data);
